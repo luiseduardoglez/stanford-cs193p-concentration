@@ -13,6 +13,7 @@
 		FA3058662063DCDD003AF9DA /* concentration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA3058642063DCDD003AF9DA /* concentration.xcdatamodeld */; };
 		FA3058682063DCDD003AF9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3058672063DCDD003AF9DA /* Assets.xcassets */; };
 		FA30586B2063DCDD003AF9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3058692063DCDD003AF9DA /* LaunchScreen.storyboard */; };
+		FA470C132135FACE0076D3AA /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA470C122135FACE0076D3AA /* Shuffle.swift */; };
 		FA69AFCF207A5C4A00444BF9 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69AFCE207A5C4A00444BF9 /* Concentration.swift */; };
 		FA69AFD1207A5D0100444BF9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69AFD0207A5D0100444BF9 /* Card.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		FA3058672063DCDD003AF9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA30586A2063DCDD003AF9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA30586C2063DCDD003AF9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA470C122135FACE0076D3AA /* Shuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
 		FA69AFCE207A5C4A00444BF9 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		FA69AFD0207A5D0100444BF9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			children = (
 				FA69AFCE207A5C4A00444BF9 /* Concentration.swift */,
 				FA69AFD0207A5D0100444BF9 /* Card.swift */,
+				FA470C122135FACE0076D3AA /* Shuffle.swift */,
 				FA30585F2063DCDD003AF9DA /* ViewController.swift */,
 				FA3058612063DCDD003AF9DA /* Main.storyboard */,
 				FA3058722063DDB6003AF9DA /* Supporting Files */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3058662063DCDD003AF9DA /* concentration.xcdatamodeld in Sources */,
+				FA470C132135FACE0076D3AA /* Shuffle.swift in Sources */,
 				FA69AFCF207A5C4A00444BF9 /* Concentration.swift in Sources */,
 				FA69AFD1207A5D0100444BF9 /* Card.swift in Sources */,
 				FA3058602063DCDD003AF9DA /* ViewController.swift in Sources */,
