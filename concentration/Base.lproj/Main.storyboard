@@ -125,15 +125,6 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfH-8R-9yq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-9h-84e">
-                                <rect key="frame" x="16" y="362" width="63" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h00-F6-bPM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsy-Fc-OJx">
                                 <rect key="frame" x="85" y="362" width="63" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,15 +153,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr1-RN-G9O">
-                                <rect key="frame" x="16" y="626" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="550.5" width="343" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="xB3-VA-wpw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJJ-1A-Pxh">
+                                <rect key="frame" x="16" y="581" width="343" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="BsB-Ni-ONC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Pxa-dv-GCd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYg-6A-lWG">
-                                <rect key="frame" x="16" y="566" width="343" height="40"/>
+                                <rect key="frame" x="16" y="611" width="343" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="NlB-ae-Jfn"/>
                                     <constraint firstAttribute="height" constant="40" id="bYf-TJ-7j0"/>
                                 </constraints>
                                 <state key="normal" title="New Game">
@@ -180,20 +185,33 @@
                                     <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9F-1l-NRY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-9h-84e">
+                                <rect key="frame" x="16" y="362" width="63" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <connections>
+                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h00-F6-bPM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wr1-RN-G9O" secondAttribute="bottom" constant="20" id="0KZ-m6-1Rt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYg-6A-lWG" secondAttribute="trailing" constant="16" id="5Zd-LD-mhE"/>
-                            <constraint firstItem="wr1-RN-G9O" firstAttribute="top" secondItem="iYg-6A-lWG" secondAttribute="bottom" constant="20" id="hUj-mf-Cfb"/>
-                            <constraint firstItem="wr1-RN-G9O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="i0G-47-wWX"/>
-                            <constraint firstItem="iYg-6A-lWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ncR-oc-Jq6"/>
-                            <constraint firstAttribute="trailing" secondItem="wr1-RN-G9O" secondAttribute="trailing" constant="16" id="oL5-2c-yy8"/>
+                            <constraint firstItem="wr1-RN-G9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5Dc-Ac-Ohc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYg-6A-lWG" secondAttribute="trailing" constant="16" id="9Gw-lx-iBA"/>
+                            <constraint firstItem="wr1-RN-G9O" firstAttribute="bottom" secondItem="RJJ-1A-Pxh" secondAttribute="top" constant="-10" id="BBF-Bs-7qI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJJ-1A-Pxh" secondAttribute="trailing" constant="16" id="GhW-Bn-Qg2"/>
+                            <constraint firstItem="RJJ-1A-Pxh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N7e-tT-YQT"/>
+                            <constraint firstItem="iYg-6A-lWG" firstAttribute="top" secondItem="RJJ-1A-Pxh" secondAttribute="bottom" constant="10" id="Tqu-OX-PGG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wr1-RN-G9O" secondAttribute="trailing" constant="16" id="kh3-XD-XBQ"/>
+                            <constraint firstItem="iYg-6A-lWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oio-EW-Mle"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iYg-6A-lWG" secondAttribute="bottom" constant="16" id="rpl-S1-HTc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="wr1-RN-G9O" id="TQV-Jo-E1x"/>
+                        <outlet property="scoreLabel" destination="RJJ-1A-Pxh" id="gjd-xS-NZR"/>
                         <outletCollection property="cardButtons" destination="ROx-SI-eny" collectionClass="NSMutableArray" id="Z65-aX-BWU"/>
                         <outletCollection property="cardButtons" destination="BTR-38-OZX" collectionClass="NSMutableArray" id="7HN-Xs-v6K"/>
                         <outletCollection property="cardButtons" destination="e9Q-RH-7Mt" collectionClass="NSMutableArray" id="F7y-vX-dnq"/>

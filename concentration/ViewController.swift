@@ -13,23 +13,37 @@ class ViewController: UIViewController
 
     lazy var game: Concentration = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     
-    var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
-        }
-    }
     @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var cardButtons: [UIButton]!
     
-    var emojiChoices: Array<String> = ["🦇", "😱", "🙀", "😈", "🎃" , "👻", "🍭", "🍬", "🍎"]
+    var themes: Dictionary<String, Array<String>> = [
+        "halloween": ["🦇", "😱", "🙀", "😈", "🎃" , "👻", "🍭", "🍬", "🍎"],
+        "animals": ["🐶", "🐱", "🐭", "🦊", "🐼" , "🦁", "🐮", "🐷", "🐸"],
+        "faces": ["😀", "😂", "😇", "😍", "😘" , "😜", "😶", "🤔", "😢"],
+        "food": ["🍎", "🍐", "🍋", "🍌", "🍓" , "🍒", "🍍", "🍇", "🍉"],
+        "flags": ["🇨🇺", "🇩🇪", "🇺🇸", "🇬🇧", "🇫🇷" , "🇪🇸", "🇨🇦", "🇯🇵", "🇲🇱"],
+        "tech": ["⌚️", "📱", "💻", "🖥", "🖨" , "💾", "📀", "🖱", "⌨️"]]
+    
+    var emojiChoices: Array<String> = []
+    
+    fileprivate func selectThemeRandomly() {
+        let themeNames = Array(themes.keys)
+        let randomThemeIndex = Int(arc4random_uniform(UInt32(themes.count)))
+        emojiChoices = themes[themeNames[randomThemeIndex]]!
+    }
+    
+    fileprivate func startNewGame() {
+        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+        selectThemeRandomly()
+        updateViewFromModel()
+        
+    }
     
     @IBAction func newGame(_ sender: Any) {
-        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
-        flipCount = 0
-        updateViewFromModel()
+        startNewGame()
     }
     @IBAction func touchCard(_ sender: UIButton) {
-        flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
@@ -39,6 +53,8 @@ class ViewController: UIViewController
     }
     
     func updateViewFromModel() {
+        flipCountLabel.text = "Flips: \(game.flipCount)"
+        scoreLabel.text = "Score: \(game.score)"
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]
@@ -60,6 +76,10 @@ class ViewController: UIViewController
             emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
         }
         return emoji[card.identifier] ?? "?"
+    }
+    
+    override func viewDidLoad() {
+        startNewGame()
     }
     
 }
